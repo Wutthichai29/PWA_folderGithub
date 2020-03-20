@@ -70,7 +70,7 @@ if ( $_GET['send'] == 'm_group' )
 			'type' => 'text',
 			'text' => $_GET['text']
 		);
-	$uid = ":U549558487b1f5238e5fb60bdfed0bffa"; // meter group
+	$uid = "U549558487b1f5238e5fb60bdfed0bffa"; // meter group
 	$client->pushMessage($uid, $text);
 }
 
