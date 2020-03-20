@@ -37,7 +37,7 @@ function get_url($urllink) {
 
 function get_profile($fullurl) 
 {
-        $channelAccessToken2 = $channelAccessToken;
+        $channelAccessToken2 = 'MmMMov1nM5n2ZfAzFpJTfe0pbrYUxSTAaK7vpkt4oEmxIqddaKpdNBbWQKsS4p1pKsw9WLks1GanKQjdLIWeTQc0QzuN9UPLG7VkCzZwlwiTen5tDymnev4FzHk7zsGJaq4+ODx5wMBNRK16Ul9qNAdB04t89/1O/w1cDnyilFU=';
  
         $header = array(
             "Content-Type: application/json",
@@ -646,8 +646,7 @@ function replyMsg($event, $client)
  
                         $url = 'https://api.line.me/v2/bot/group/'.$gid.'/member/'.$uid;
                         //$url = 'https://api.line.me/v2/bot/profile/'.$uid;
-                        $channelAccessToken2 = $channelAccessToken;
- 
+                        $channelAccessToken2 = 'MmMMov1nM5n2ZfAzFpJTfe0pbrYUxSTAaK7vpkt4oEmxIqddaKpdNBbWQKsS4p1pKsw9WLks1GanKQjdLIWeTQc0QzuN9UPLG7VkCzZwlwiTen5tDymnev4FzHk7zsGJaq4+ODx5wMBNRK16Ul9qNAdB04t89/1O/w1cDnyilFU=';
                         $header = array(
                             "Content-Type: application/json",
                             'Authorization: Bearer '.$channelAccessToken2,
