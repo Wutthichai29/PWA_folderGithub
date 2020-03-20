@@ -412,8 +412,7 @@ function replyMsg($event, $client)
  
 						$id = $event['source']['userId'];
                         $urlp = 'https://api.line.me/v2/bot/profile/'.$id;
-                        $channelAccessToken2 = $channelAccessToken;
- 
+                        $channelAccessToken2 = 'MmMMov1nM5n2ZfAzFpJTfe0pbrYUxSTAaK7vpkt4oEmxIqddaKpdNBbWQKsS4p1pKsw9WLks1GanKQjdLIWeTQc0QzuN9UPLG7VkCzZwlwiTen5tDymnev4FzHk7zsGJaq4+ODx5wMBNRK16Ul9qNAdB04t89/1O/w1cDnyilFU=';
                         $header = array(
                             "Content-Type: application/json",
                             'Authorization: Bearer '.$channelAccessToken2,
