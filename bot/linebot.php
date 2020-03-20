@@ -9,7 +9,7 @@ header('Content-Type: text/html; charset=utf-8');
 require_once('LINEBotTiny.php');
 
 //mlab
-$api_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+$api_key = "W6KTmM7nGpyRVrYNOXynU1hy5C0F1MOo";
 
 //line
 $channelAccessToken = 'MmMMov1nM5n2ZfAzFpJTfe0pbrYUxSTAaK7vpkt4oEmxIqddaKpdNBbWQKsS4p1pKsw9WLks1GanKQjdLIWeTQc0QzuN9UPLG7VkCzZwlwiTen5tDymnev4FzHk7zsGJaq4+ODx5wMBNRK16Ul9qNAdB04t89/1O/w1cDnyilFU=';
