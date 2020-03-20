@@ -377,15 +377,15 @@ function replyMsg($event, $client)
         //ข้อความtext ที่ได้รับ
         $msg = $event['message']['text'];
  
-        //$api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-        $url = 'https://api.mlab.com/api/1/databases/linedb/collections/meter_gis?apiKey='.$api_key;
+        $api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        $url = 'https://api.mlab.com/api/1/databases/testbot/collections/bot?apiKey='.$api_key;
  
  
         //file_get_contents('https://api.mlab.com/api/1/databases/linedb/collections/kunutt?apiKey='.$api_key.'&q={ "_id" : { "$oid" : "59fc80f9c2ef163b3e8be96d"} ,"question":"'.$_question.'"}&c=true');
  
  
         $msg_encode = urlencode($msg);
-        $json_cmsg = file_get_contents('https://api.mlab.com/api/1/databases/linedb/collections/meter_gis?apiKey='.$api_key.'&q={"question":"'.$msg_encode.'"}');
+        $json_cmsg = file_get_contents('https://api.mlab.com/api/1/databases/testbot/collections/bot?apiKey='.$api_key.'&q={"question":"'.$msg_encode.'"}');
         $q_msg = json_decode($json_cmsg); 
  
  
@@ -405,7 +405,7 @@ function replyMsg($event, $client)
                 }
  
                 //count-question---------//
-                $json_c = file_get_contents('https://api.mlab.com/api/1/databases/linedb/collections/meter_gis?apiKey='.$api_key.'&q={"question":"'.$_question.'"}&c=true');
+                $json_c = file_get_contents('https://api.mlab.com/api/1/databases/testbot/collections/bot?apiKey='.$api_key.'&q={"question":"'.$_question.'"}&c=true');
                 $count = json_decode($json_c);  //จำนวนที่นับได้
                 //count-question---------//
  
@@ -487,7 +487,7 @@ function replyMsg($event, $client)
                 else if ($count == 1){  
  
                     //query-คำถามที่เคยถามในdb----------------------------------//
-                    $json_f = file_get_contents('https://api.mlab.com/api/1/databases/linedb/collections/meter_gis?apiKey='.$api_key.'&q={"question":"'.$_question.'"}');
+                    $json_f = file_get_contents('https://api.mlab.com/api/1/databases/testbot/collections/bot?apiKey='.$api_key.'&q={"question":"'.$_question.'"}');
                     $q_json_f = json_decode($json_f); 
                     $q_json_id = $q_json_f[0]->_id;
                     $q_json_oid = '';
@@ -497,7 +497,7 @@ function replyMsg($event, $client)
  
                     //update-----------------------------------//
                     //$_id = '59fb2268bd966f7657da67cc';
-                    $url_up = 'https://api.mlab.com/api/1/databases/linedb/collections/meter_gis/'.$q_json_oid.'?apiKey='.$api_key;
+                    $url_up = 'https://api.mlab.com/api/1/databases/testbot/collections/bot/'.$q_json_oid.'?apiKey='.$api_key;
  
                     $newupdate = json_encode(
                         array(
@@ -715,10 +715,10 @@ function replyMsg($event, $client)
 						$pieces = explode(" ", $msg);
 						$_sel = $pieces[1];
 
-						//$api_key="xxxxxxxxxxxxxxxxxxxxxxxx";
+						$api_key="W6KTmM7nGpyRVrYNOXynU1hy5C0F1MOo";
 
 						//query-คำถามที่เคยถามในdb----------------------------------//
-						$json_f = file_get_contents('https://api.mlab.com/api/1/databases/linedb/collections/meter_gis?apiKey='.$api_key.'&q={"question":"'.$_sel.'"}');
+						$json_f = file_get_contents('https://api.mlab.com/api/1/databases/testbot/collections/bot?apiKey='.$api_key.'&q={"question":"'.$_sel.'"}');
 						$q_json_f = json_decode($json_f); 
 						$q_json_id = $q_json_f[0]->_id;
 						$q_json_oid = '';
@@ -727,7 +727,7 @@ function replyMsg($event, $client)
 						}
  
 						//$_id = '59fb2268bd966f7657da67cc';
-						$url_d = 'https://api.mlab.com/api/1/databases/linedb/collections/meter_gis/'.$q_json_oid.'?apiKey='.$api_key;
+						$url_d = 'https://api.mlab.com/api/1/databases/testbot/collections/bot/'.$q_json_oid.'?apiKey='.$api_key;
 
 						$optsd = array(
 								'http' => array(
@@ -758,10 +758,10 @@ function replyMsg($event, $client)
 						$pieces = explode("|", $msg);
 						$_sel = $pieces[1];
 
-						//$api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+						$api_key="W6KTmM7nGpyRVrYNOXynU1hy5C0F1MOo";
 
 						$msg_encode = urlencode($_sel);
-						$json_cmsg = file_get_contents('https://api.mlab.com/api/1/databases/linedb/collections/meter_gis?apiKey='.$api_key.'&q={"question":"'.$msg_encode.'"}');
+						$json_cmsg = file_get_contents('https://api.mlab.com/api/1/databases/testbot/collections/bot?apiKey='.$api_key.'&q={"question":"'.$msg_encode.'"}');
 						$q_msg = json_decode($json_cmsg); 
 				 
 						if($q_msg){
