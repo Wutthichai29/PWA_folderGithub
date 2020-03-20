@@ -377,7 +377,7 @@ function replyMsg($event, $client)
         //ข้อความtext ที่ได้รับ
         $msg = $event['message']['text'];
  
-        $api_key="xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+        $api_key="W6KTmM7nGpyRVrYNOXynU1hy5C0F1MOo";
         $url = 'https://api.mlab.com/api/1/databases/testbot/collections/bot?apiKey='.$api_key;
  
  
